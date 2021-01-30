@@ -1,0 +1,601 @@
+@charset 'UTF-8';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Hannari";
+    color: #74654C;
+    -webkit-animation: fadeIn 4s ease 0s 1 normal;
+    animation: fadeIn 4s ease 0s 1 normal;
+}
+
+#contents {
+    background-color: #F5F0D6;
+    overflow: hidden;
+}
+
+/*ヘッダー*/
+
+nav {
+    z-index: 1;
+    background-color: #F5F0D6;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #74654C;
+    font-family: "Sawarabi Mincho";
+    font-size: 1.4em;
+    line-height: 1.8em;
+}
+
+#top_caption {
+    writing-mode: vertical-rl;
+    white-space: pre;
+    z-index: 100;
+    position: absolute;
+    top: -190px;
+    right: -50px;
+    font-size: 3em;
+    line-height: 3em;
+    color: #fff;
+    z-index: 999;
+    pointer-events: none;
+}
+
+/*スライド*/
+.slideshow {
+    position: relative;
+    margin: auto;
+    width: 1280px;
+    height: 900px;
+    overflow: hidden;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow::after {
+    content: '';
+    width: 1280px;
+    height: 1024px;
+    display: inline-block;
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -80px;
+    left: 0;
+    z-index: 100;
+}
+
+#top_img img {
+    width: 300px;
+    height: auto;
+    z-index: 1000;
+    position: absolute;
+    top: 10vh;
+    left: 8vw;
+}
+
+#top_img2 img {
+    width: 300px;
+    height: auto;
+    z-index: 1000;
+    position: absolute;
+    top: 70vh;
+    right: 7vw;
+}
+
+
+/*about*/
+main {
+    text-align: center;
+}
+
+#main_caption {
+    margin: 280px;
+}
+
+#main_caption p {
+    font-family: "Sawarabi Mincho";
+    font-size: 1.6em;
+    letter-spacing: .4em;
+}
+
+#main_caption2 {
+    display: flex;
+    justify-content: center;
+    margin: 10vw;
+}
+
+#main_caption2 p {
+    font-family: "Sawarabi Mincho";
+    font-size: 1.4em;
+}
+
+
+#main_caption3 {
+    display: flex;
+    justify-content: center;
+    margin: 10vw;
+}
+
+#main_caption3 p {
+    font-family: "Sawarabi Mincho";
+    font-size: 1.4em;
+}
+
+#main_caption4 {
+    display: flex;
+    justify-content: center;
+    margin: 10vw;
+}
+
+#main_caption4 p {
+    font-family: "Sawarabi Mincho";
+    font-size: 1.4em;
+}
+
+#main_caption5 {
+    display: flex;
+    justify-content: center;
+    margin: 10vw;
+}
+
+#main_caption5 p {
+    font-family: "Sawarabi Mincho";
+    font-size: 1.4em;
+}
+
+
+#main_caption6 {
+    margin: 280px;
+}
+
+#main_caption6 p {
+    font-family: "Sawarabi Mincho";
+    font-size: 1.6em;
+    letter-spacing: .4em;
+}
+
+#flower_img img {
+    width: 300px;
+    height: auto;
+    display: inline-block;
+    z-index: 1000;
+    position: absolute;
+    top: 220vh;
+    left: 10vw;
+}
+
+#plant_img img {
+    width: 300px;
+    height: auto;
+    display: inline-block;
+    z-index: 1000;
+    position: absolute;
+    top: 320vh;
+    left: 10vw;
+}
+
+#plant2_img img {
+    width: 300px;
+    height: auto;
+    display: inline-block;
+    z-index: 1000;
+    position: absolute;
+    top: 500vh;
+    left: 10vw;
+}
+
+#bird2_img img {
+    width: 260px;
+    height: auto;
+    display: inline-block;
+    z-index: 1000;
+    position: absolute;
+    top: 420vh;
+    right: 10vw;
+}
+
+
+/*予約*/
+#reservation {
+    margin-top: 200px;
+}
+
+.btn-circle {
+    display: inline-block;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 700;
+    background-color: #74645c;
+    letter-spacing: 1.5px;
+    width: 220px;
+    text-align: center;
+    padding: 24px;
+    position: relative;
+    opacity: 1 !important;
+    transition: all 0.4s;
+    overflow: hidden;
+    border: none;
+}
+
+.btn-circle:before {
+    content: "";
+    display: block;
+    width: 220px;
+    height: 220px;
+    background-color: #FFF;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-100%, 100%);
+    transition: all 0.4s;
+    pointer-events: none;
+}
+
+.btn-circle:after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #FFF;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18px;
+    transition: all 0.4s;
+}
+
+.btn-circle:hover {
+    color: #000;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-circle:hover:after {
+    width: 0;
+    height: 0;
+    border-radius: 0;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 6px;
+    border-color: transparent transparent transparent #FFF;
+    right: 12px;
+}
+
+.btn-circle:hover:before {
+    transform: translate(-12px, 60px);
+}
+
+.btn-circle span {
+    position: relative;
+    z-index: 99;
+}
+
+/*アクセス*/
+#access {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+#access ul {
+    margin: 0 100px 100px 100px;
+    padding: 0;
+    text-align: left;
+    border-top: 3px dotted #74645C;
+    border-bottom: 3px dotted #74645C;
+}
+
+#access ul li {
+    list-style: none;
+    font-size: 1.4em;
+}
+
+#access ul li img {
+    width: 70%;
+}
+
+/*フッター*/
+footer {
+    margin-top: 300px;
+    width: 100vw;
+    height: auto;
+    text-align: center;
+}
+
+
+
+/*トップへ戻る*/
+
+/*TOPへ戻る　ここから*/
+#scrollTop {
+    bottom: 20px;
+    padding: 4px;
+    position: fixed;
+    right: 20px;
+}
+
+
+/*ページロード時のアニメーション効果*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+/*フェードイン*/
+.fadein {
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: all 800ms;
+}
+
+.fadein.scrollin {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/*ボタン効果*/
+.btn {
+    letter-spacing: 0;
+}
+
+.btn:hover,
+.btn:active {
+    letter-spacing: 5px;
+}
+
+.btn:after,
+.btn:before {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    -webkit-transition: all 280ms ease-in-out;
+    transition: all 280ms ease-in-out;
+    width: 0;
+}
+
+.btn:hover:after,
+.btn:hover:before {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-color: #fff;
+    -webkit-transition: width 350ms ease-in-out;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+}
+
+.btn:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 70%;
+}
+
+
+
+
+/*********** モバイル版 ***********/
+
+@media (max-width: 767px) {
+    nav {
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    nav ul li a {
+        font-size: .8em;
+    }
+
+    #top_caption {
+        position: absolute;
+        top: -90px;
+        right: -100px;
+        font-size: 1em;
+        line-height: 3em;
+    }
+
+    .slideshow {
+        width: 100vw;
+        height: 45vh;
+    }
+
+    .slideshow img {
+        width: 100vw;
+        height: 40vh;
+    }
+
+    .slideshow::after {
+        width: 100vw;
+        height: 45vh;
+        position: absolute;
+        top: -15px;
+        left: 0;
+    }
+
+    #top_img img {
+        width: 100px;
+        height: auto;
+        z-index: 1000;
+        position: absolute;
+        top: 0vh;
+        left: 0vw;
+    }
+
+
+    #top_img2 img {
+        width: 100px;
+        height: auto;
+        z-index: 1000;
+        position: absolute;
+        top: 35vh;
+        right: 0vw;
+    }
+
+    #main_caption {
+        margin: 0;
+        margin-top: 100px;
+    }
+
+    #main_caption p {
+        font-size: .8em;
+        letter-spacing: normal;
+    }
+
+    #main_caption2,
+    #main_caption3,
+    #main_caption4,
+    #main_caption5 {
+        display: block;
+        margin: 10vw;
+    }
+
+    #main_caption2 p,
+    #main_caption3 p,
+    #main_caption4 p,
+    #main_caption5 p,
+    #main_caption6 p {
+        font-size: .8em;
+        letter-spacing: normal;
+    }
+
+    #main_caption6 {
+        margin: 0;
+        margin-top: 100px;
+    }
+
+    #main_caption2 img,
+    #main_caption3 img,
+    #main_caption4 img,
+    #main_caption5 img {
+        width: 80vw;
+    }
+
+    #about {
+        margin: 0;
+        padding: 0;
+    }
+
+    #about img.number {
+        width: 50px;
+        margin-right: 200px;
+    }
+
+    #flower_img img {
+        width: 100px;
+        height: auto;
+        display: inline-block;
+        z-index: 1000;
+        position: absolute;
+        top: 260vh;
+        left: 0;
+    }
+
+    #plant_img img {
+        width: 100px;
+        height: auto;
+        display: inline-block;
+        z-index: 1000;
+        position: absolute;
+        top: 320vh;
+        left: 0;
+    }
+
+    #plant2_img img {
+        width: 100px;
+        height: auto;
+        display: inline-block;
+        z-index: 1000;
+        position: absolute;
+        top: 60vh;
+        right: 0;
+    }
+
+    #bird2_img img {
+        width: 100px;
+        height: auto;
+        display: inline-block;
+        z-index: 1000;
+        position: absolute;
+        top: 350vh;
+        right: 0;
+    }
+
+    #reservation {
+        margin-top: 100px;
+    }
+
+    #access {
+        margin-top: 100px;
+        display: block;
+    }
+
+    #access iframe {
+        width: 90vw;
+        height: 30vh;
+    }
+
+    #access ul {
+        width: 80vw;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        font-size: .8em;
+    }
+
+    #access ul li img {
+        width: 100px;
+    }
+
+    footer {
+        margin-top: 100px;
+        text-align: center;
+        font-size: .6em;
+    }
+
+    #scrollTop img {
+        width: 50px;
+        bottom: 20px;
+        padding: 4px;
+        position: fixed;
+        right: 0;
+    }
+
+}
